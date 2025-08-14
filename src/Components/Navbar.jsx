@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-md text-white px-6 py-4 flex justify-between items-center z-50">
+      <nav className="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center z-50 shadow-md">
         <h1 className="text-xl font-bold">My Portfolio</h1>
 
         {/* Desktop Menu */}
@@ -38,8 +38,9 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-<div className={`md:hidden transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96" : "max-h-0"}`}>
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "mt-64" : "mt-16" }`}>
   <div className="flex flex-col items-center space-y-4 bg-black/50 backdrop-blur-sm py-4">
     <Link to="/" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
       <FaHome className="inline mr-2" /> Home
@@ -55,7 +56,6 @@ export default function Navbar() {
     </Link>
   </div>
 </div>
-
       )}
     </>
   );
