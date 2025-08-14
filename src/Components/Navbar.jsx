@@ -38,22 +38,24 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center space-y-8 md:hidden">
-          <Link to="/" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-            <FaHome className="inline mr-2" /> Home
-          </Link>
-          <Link to="/about" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-            <FaUser className="inline mr-2" /> About
-          </Link>
-          <Link to="/projects" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-            <FaProjectDiagram className="inline mr-2" /> Projects
-          </Link>
-          <Link to="/resume" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-            <FaFileAlt className="inline mr-2" /> Resume
-          </Link>
-        </div>
+      {/* Mobile Menu */}
+<div className={`md:hidden transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96" : "max-h-0"}`}>
+  <div className="flex flex-col items-center space-y-4 bg-black/50 backdrop-blur-sm py-4">
+    <Link to="/" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+      <FaHome className="inline mr-2" /> Home
+    </Link>
+    <Link to="/about" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+      <FaUser className="inline mr-2" /> About
+    </Link>
+    <Link to="/projects" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+      <FaProjectDiagram className="inline mr-2" /> Projects
+    </Link>
+    <Link to="/resume" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+      <FaFileAlt className="inline mr-2" /> Resume
+    </Link>
+  </div>
+</div>
+
       )}
     </>
   );
