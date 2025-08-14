@@ -40,7 +40,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex flex-col items-center justify-center space-y-8 md:hidden">
+        <div className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center space-y-8 md:hidden">
           <Link to="/" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
             <FaHome className="inline mr-2" /> Home
           </Link>
