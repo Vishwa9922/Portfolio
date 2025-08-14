@@ -84,10 +84,7 @@ export default function Home() {
             LET ME INTRODUCE MYSELF 😊
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-xl mb-6 leading-relaxed">
-            I am a passionate Full-Stack Java Developer with expertise in Spring Boot,
-            MySQL, and React.js. I focus on building scalable, efficient, and user-friendly
-            applications that solve real-world problems. I enjoy working on innovative
-            projects and continuously improving my skills to stay ahead in tech.
+            I'm a passionate Full-Stack Java Developer specializing in Spring Boot, MySQL, and React.js. I enjoy creating scalable, efficient, and user-friendly applications that solve real-world problems. I’m always learning and striving to stay ahead in technology to deliver innovative solutions.
           </p>
 
           {/* Social Icons */}
