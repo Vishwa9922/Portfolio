@@ -5,20 +5,23 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col justify-between text-white bg-gradient-to-br from-gray-900 via-gray-800 to-black font-['Poppins']">
+    <div className="relative min-h-screen flex flex-col justify-between text-white bg-gradient-to-br from-gray-900 via-gray-800 to-black font-['Poppins'] pt-20">
+      {/* pt-20 => navbar ke liye space */}
 
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-[90vh] px-6 md:px-12 gap-8 md:gap-12">
-        
+
         {/* Left Text */}
         <motion.div
-          className="flex-1 text-center md:text-left p-6 rounded-xl backdrop-blur-lg bg-white/5 border border-gray-700 shadow-lg"
-          initial={{ opacity: 0, y: 50 }}
+          className="flex-1 text-center md:text-left p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-gray-700 shadow-xl"
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-2xl sm:text-3xl md:text-4xl text-gray-200 mb-9">Hi There 👋🏼, I'M</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-700 bg-clip-text text-transparent drop-shadow-lg">
+          <p className="text-2xl sm:text-3xl md:text-4xl text-gray-200 mb-4">
+            Hi There 👋🏼, I'M
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-700 bg-clip-text text-transparent drop-shadow-lg">
             Vishwajeet Kanchanwar
           </h1>
           <p className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-cyan-400">
@@ -32,8 +35,8 @@ export default function Home() {
                 ],
                 autoStart: true,
                 loop: true,
-                delay: 50,
-                deleteSpeed: 25,
+                delay: 60,
+                deleteSpeed: 30,
               }}
             />
           </p>
@@ -49,7 +52,7 @@ export default function Home() {
           <img
             src={codingBoy}
             alt="Coding Boy"
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain rounded-xl shadow-lg shadow-cyan-500/40 hover:scale-105 transition-transform duration-500"
+            className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain rounded-2xl shadow-xl shadow-cyan-500/50 hover:scale-110 transition-transform duration-500"
           />
         </motion.div>
       </section>
@@ -68,7 +71,7 @@ export default function Home() {
           <img
             src={myPhoto}
             alt="Vishwajeet"
-            className="w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 rounded-full border-4 border-blue-500 shadow-[0_0_25px_#38bdf8] object-cover hover:scale-105 transition-transform duration-500"
+            className="w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 rounded-full border-4 border-blue-500 shadow-[0_0_30px_#38bdf8] object-cover hover:scale-110 transition-transform duration-500"
           />
         </motion.div>
 
@@ -80,11 +83,14 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">
             LET ME INTRODUCE MYSELF 😊
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-xl mb-6 leading-relaxed">
-            I'm a passionate Full-Stack Java Developer specializing in Spring Boot, MySQL, and React.js. I enjoy creating scalable, efficient, and user-friendly applications that solve real-world problems. I’m always learning and striving to stay ahead in technology to deliver innovative solutions.
+            I'm a passionate Full-Stack Java Developer specializing in Spring Boot,
+            MySQL, and React.js. I enjoy creating scalable, efficient, and user-friendly
+            applications that solve real-world problems. I’m always learning and striving
+            to stay ahead in technology to deliver innovative solutions.
           </p>
 
           {/* Social Icons */}
@@ -93,7 +99,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/vishwajeet-kanchanwar-26793b360/"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-400 hover:scale-125 transition-transform duration-300 hover:drop-shadow-[0_0_10px_#00bfff]"
+              className="text-blue-400 hover:scale-125 transition-transform duration-300 hover:drop-shadow-[0_0_15px_#0a66c2]"
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin"></i>
@@ -102,14 +108,14 @@ export default function Home() {
               href="https://github.com/Vishwa9922"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-300 hover:scale-125 transition-transform duration-300 hover:drop-shadow-[0_0_10px_white]"
+              className="text-gray-300 hover:scale-125 transition-transform duration-300 hover:drop-shadow-[0_0_15px_white]"
               aria-label="GitHub"
             >
               <i className="fab fa-github"></i>
             </a>
             <a
               href="mailto:vishukanchanwar17@gmail.com"
-              className="text-red-400 hover:scale-125 transition-transform duration-300 hover:drop-shadow-[0_0_10px_#ff4d4d]"
+              className="text-red-400 hover:scale-125 transition-transform duration-300 hover:drop-shadow-[0_0_15px_#ff4d4d]"
               aria-label="Email"
             >
               <i className="fas fa-envelope"></i>
