@@ -11,6 +11,7 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center z-50 shadow-md">
         <h1 className="text-xl font-bold">My Portfolio</h1>
 
@@ -38,24 +39,31 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "mt-64" : "mt-16" }`}>
-  <div className="flex flex-col items-center space-y-4 bg-black/50 backdrop-blur-sm py-4">
-    <Link to="/" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-      <FaHome className="inline mr-2" /> Home
-    </Link>
-    <Link to="/about" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-      <FaUser className="inline mr-2" /> About
-    </Link>
-    <Link to="/projects" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-      <FaProjectDiagram className="inline mr-2" /> Projects
-    </Link>
-    <Link to="/resume" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-      <FaFileAlt className="inline mr-2" /> Resume
-    </Link>
-  </div>
-</div>
+        <div className="md:hidden fixed top-0 left-0 w-full h-screen z-[60] bg-black/80 backdrop-blur-md flex flex-col items-center space-y-6 pt-20">
+          {/* Close Button */}
+          <button
+            className="absolute top-4 right-6 text-white hover:text-red-400 transition-colors"
+            onClick={toggleMenu}
+          >
+            <FaTimes size={28} />
+          </button>
+
+          {/* Menu Links */}
+          <Link to="/" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+            <FaHome className="inline mr-2" /> Home
+          </Link>
+          <Link to="/about" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+            <FaUser className="inline mr-2" /> About
+          </Link>
+          <Link to="/projects" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+            <FaProjectDiagram className="inline mr-2" /> Projects
+          </Link>
+          <Link to="/resume" onClick={toggleMenu} className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+            <FaFileAlt className="inline mr-2" /> Resume
+          </Link>
+        </div>
       )}
     </>
   );
