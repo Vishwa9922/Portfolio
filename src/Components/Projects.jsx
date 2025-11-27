@@ -22,7 +22,7 @@ export default function Projects() {
           </p>
           <div className="flex space-x-4">
             <a 
-              href="https://github.com/Vishwa9922/formlix" 
+              href="https://github.com/Vishwa9922/Fromlix" 
               target="_blank" 
               rel="noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition-colors duration-200"
