@@ -30,7 +30,7 @@ export default function Projects() {
               GitHub
             </a>
             <a 
-              href="https://formlix.vercel.app/" 
+              href="https://formlix-frontend.vercel.app/" 
               target="_blank" 
               rel="noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition-colors duration-200"
